@@ -1,0 +1,102 @@
+<html>
+<title>
+js
+</title>
+
+<body>
+abc
+<br>
+
+  <br>
+  <TABLE>
+    <TR>
+      <TD>
+        <a href=http://anekdot.ru/last/j.html>j-anek</a>
+      </TD>
+<!--
+      <TD>
+        <a href=http://anekdot.ru/an/an$yy$mm/z$yy$mm$dd.html>z$yy$mm$dd</a>
+      </TD>
+-->
+    </TR>
+    <TR>
+      <TD>
+        <a href=http://anekdot.ru/last/o.html>o-story</a>
+      </TD>
+<!--
+      <TD>
+        <a href=http://anekdot.ru/an/an$yy$mm/y$yy$mm$dd.html>y$yy$mm$dd</a>
+      </TD>
+-->
+    </TR>
+  </TABLE>
+
+
+<script language="Javascript">
+
+function print_day (yymm, yymmdd)
+{
+  document.writeln("<br> <TABLE> <TR> <TD>");
+  document.writeln("<a href=http://anekdot.ru/a/an" +yymm+ "/j" +yymmdd+ ";10.html>j" +yymmdd+ "</a>");
+  document.writeln("</TD> <TD>");
+  document.writeln("<a href=http://anekdot.ru/an/an" +yymm+ "/z" +yymmdd+ ".html>z" +yymmdd+ "</a>");
+  document.writeln("</TD> </TR> <TR> <TD>");
+  document.writeln("<a href=http://anekdot.ru/a/an" +yymm+ "/o" +yymmdd+ ";10.html>o" +yymmdd+ "</a>");
+  document.writeln("</TD> <TD>");
+  document.writeln("<a href=http://anekdot.ru/an/an" +yymm+ "/y" +yymmdd+ ".html>y" +yymmdd+ "</a>");
+  document.writeln("</TD> </TR> </TABLE>");
+}
+
+function formatDate_yymmdd(Date)
+{
+  return pad2(Date.getYear()-100) + pad2(Date.getMonth()+1) + pad2(Date.getDate());
+}
+
+function formatDate_yymm(Date)
+{
+  return pad2(Date.getYear()-100) + pad2(Date.getMonth()+1);
+}
+
+function pad2(num)
+{
+  return (num > 9) ? "" + num : "0" + num;
+}
+
+  currDate = new Date();
+
+  print_day(formatDate_yymm(currDate), formatDate_yymmdd(currDate));
+
+</script>
+<br>
+xyz
+
+<!--
+
+  print_day("yy", "mm", "dd");
+
+
+  <br>
+  <TABLE>
+    <TR>
+      <TD>
+        <a href=http://anekdot.ru/a/an$yy$mm/j$yy$mm$dd;10.html>j$yy$mm$dd</a>
+      </TD>
+      <TD>
+        <a href=http://anekdot.ru/an/an$yy$mm/z$yy$mm$dd.html>z$yy$mm$dd</a>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <a href=http://anekdot.ru/a/an$yy$mm/o$yy$mm$dd;10.html>o$yy$mm$dd</a>
+      </TD>
+      <TD>
+        <a href=http://anekdot.ru/an/an$yy$mm/y$yy$mm$dd.html>y$yy$mm$dd</a>
+      </TD>
+    </TR>
+  </TABLE>
+
+-->
+
+</body>
+</html>
+
